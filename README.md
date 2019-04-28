@@ -1,6 +1,6 @@
 # Simple Autoclicker
 
-It wasn't really intended to be an autoclicker in the first place, it actually started out as a simple keylogger. However I shimmied it into a janky clicker, its functional though.
+It wasn't really intended to be an autoclicker in the first place, it actually started out as a simple keylogger. However I shimmied it into a janky clicker, i'm not particularly proud of this code but i'm putting it out there incase somebody wants to look at it/use parts of it.
 
 ## How to use
 1. You obviously need to compile it first, theres a .vcxproj and .sln file in the directory, if you have visual studio you can double-click one of these to open the project and compile it.
