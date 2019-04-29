@@ -87,7 +87,8 @@ std::string GetKeyString(int Input) {
 	}
 }
 
-// partly skidded, don't crucify me please
+// partly skidded, don't crucify me please. Check out the repository of this autoclicker for the "Original" mouse & keyboard hook implementation.
+// https://github.com/Buzznacker/C-Autoclicker
 
 LRESULT CALLBACK MouseCallBack(int nCode, WPARAM wParam, LPARAM lParam)
 {
