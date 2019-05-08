@@ -15,7 +15,7 @@ int main()
 
 	// Initialize Hook and create thread to intercept mouse and keyboard events.
 
-	if (initHook() == NULL) {
+	if (!initHook()) {
 		cout << "Hook Initialization Failed..." << endl;
 		cin.get();
 		exit(1);
@@ -37,7 +37,7 @@ int main()
 
 		if (GetKeyString(currentkey) == "P") {
 			toggled = !toggled;
-			if (toggled == false) {
+			if (!toggled) {
 				cout << "\n\r  Clicker Toggled [OFF]" << endl;
 			}
 			else {
@@ -62,7 +62,7 @@ DWORD WINAPI ClickThread(LPVOID lParam) {
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(random(minDelay, maxDelay)));
 
-		if (mousedown == 1 && toggled == true) {
+		if (mousedown == 1 && toggled) {
 
 			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, NULL, NULL);
 			std::this_thread::sleep_for(std::chrono::milliseconds(random(7, 12)));
